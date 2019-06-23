@@ -1,5 +1,0 @@
-<?php
-
-include("server.js");
-
-?>
