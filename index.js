@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors')
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
+const bodyParser = require('body-parser');
 
 // Iniciando o App
 const app = express();
@@ -9,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(bodyParser.json({ limit: '10mb' }));
-app.use(bodyParser.utlencoded({ extended: true, limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
 mongoose
   .connect(
