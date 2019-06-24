@@ -6,7 +6,10 @@ const requireDir = require('require-dir');
 // Iniciando o App
 const app = express();
 app.use(express.json());
-app.use(cors()) 
+app.use(cors());
+
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.utlencoded({ extended: true, limit: '10mb' }));
 
 mongoose
   .connect(
