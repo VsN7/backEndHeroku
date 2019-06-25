@@ -6,7 +6,7 @@ module.exports = {
   async index(req, res) {
     const { page = 1 } = req.query;
     
-    const products = await Product.paginate({}, { page, limit: 3,sort: { data: -1 } });
+    const products = await Product.paginate({}, { page, limit: 5,sort: { data: -1 } });
 
     return res.json(products);
   },
