@@ -4,8 +4,7 @@ const User = mongoose.model('User');
 
 module.exports = {
   async index(req, res) {
-    const { page = 1 } = req.query;
-    const user = await User.paginate({}, { page, limit: 10 });
+    const user = await User.find(req.query);
     return res.json(user);
   },
 
@@ -16,16 +15,12 @@ module.exports = {
   },
 
   async verificar(req, res) {
-    console.log(req.params.login);
-    
-    const user = await User.findOne({ login: req.params.login});
-
+    const user = await User.findOne({ email: req.params.email});
     return res.json(user);
   },
 
   async store(req, res) {
     const user = await User.create(req.body);
-    
     return res.json(user);
   },
 
