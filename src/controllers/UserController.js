@@ -19,6 +19,14 @@ module.exports = {
     return res.json(user);
   },
 
+  async verificarLogin(req, res) {
+    console.log(req.params.login);
+    
+    const user = await User.findOne({ login: req.params.login});
+
+    return res.json(user);
+  },
+
   async store(req, res) {
     const user = await User.create(req.body);
     return res.json(user);

@@ -20,6 +20,7 @@ routes.post('/users', UserController.store);
 routes.put('/users/:id', UserController.update);
 routes.delete('/users/:id', UserController.destroy);
 routes.get('/users/:email', UserController.verificar);
+routes.get('/users/:login', UserController.verificarLogin);
 
 routes.get('/orcamentos', OrcamentoController.index);
 routes.post('/orcamentos', OrcamentoController.store);

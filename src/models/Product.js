@@ -13,7 +13,22 @@ const ProductSchema = new mongoose.Schema({
   data: {
     type: Date,
     default: Date.now
+  },
+
+  produto: {
+    type: String,
+    required: true,
+  },
+  valor: {
+    type: String,
+    required: true,
+  },
+  local: {
+    type: String,
+    required: true,
   }
+
+
 });
 
 
