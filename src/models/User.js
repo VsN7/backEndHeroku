@@ -2,21 +2,14 @@ const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate');
 
 const UserSchema = new mongoose.Schema({
-  email: {
+  login: {
     type: String,
-    unique: true,
+    required: true,
   },
   senha: {
     type: String,
     required: true,
-  },
-  nome: {
-    type: String,
-  },
-  login: {
-    type: String,
-  },
-  
+  }
 });
 
 UserSchema.plugin(mongoosePaginate);

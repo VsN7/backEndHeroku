@@ -2,6 +2,18 @@ const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate');
 
 const ProductSchema = new mongoose.Schema({
+  produto: {
+    type: String,
+    required: true,
+  },
+  valor: {
+    type: String,
+    required: true,
+  },
+  local: {
+    type: String,
+    required: true,
+  },
   user: {
     type: String,
     required: true,
@@ -13,19 +25,7 @@ const ProductSchema = new mongoose.Schema({
   data: {
     type: Date,
     default: Date.now
-  },
-
-  produto: {
-    type: String,
-  },
-  valor: {
-    type: String,
-  },
-  local: {
-    type: String,
   }
-
-
 });
 
 
