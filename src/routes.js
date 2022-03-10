@@ -34,5 +34,6 @@ routes.put('/imagens/:id', ImagemController.update);
 routes.delete('/imagens/:id', ImagemController.destroy);
 routes.get('/imagens/:cliente_id', ImagemController.listaImagens);
 routes.get('/imagens/id/:id', ImagemController.show);
+//teste
 
 module.exports = routes;
