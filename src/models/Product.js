@@ -17,15 +17,12 @@ const ProductSchema = new mongoose.Schema({
 
   produto: {
     type: String,
-    required: true,
   },
   valor: {
     type: String,
-    required: true,
   },
   local: {
     type: String,
-    required: true,
   }
 
 

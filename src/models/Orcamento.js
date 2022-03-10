@@ -3,7 +3,6 @@ const mongoosePaginate = require('mongoose-paginate');
 const OrcamentoSchema = new mongoose.Schema({
   cliente: {
     type: String,
-    required: true,
   },
   cpf: {
     type: String,
@@ -22,15 +21,12 @@ const OrcamentoSchema = new mongoose.Schema({
   },
   dataInicio: {
     type: String,
-    required: true,
   },
   previsaoEntrega: {
     type: String,
-    required: true,
   },
   valor: {
     type: Number,
-    required: true,
   },
   observacoes: {
     type: String,
